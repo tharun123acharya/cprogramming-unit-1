@@ -2,7 +2,7 @@
 
 int main()
 {
-    int arr[6] = {5, 12, 18, 25, 32, 40};
+    int arr[6] = {20, 25, 30, 35, 45, 50};
     int low = 0, high = 5, mid, key;
 
     printf("Enter the element to search: ");

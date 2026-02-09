@@ -1,17 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int arr[] = {5, 10, 15, 20, 25};
-    int *ptr;
+    int arr[] = {100, 200, 300, 400, 500};
+    int *ptr = arr;  
 
-    ptr = arr;
+    printf("Array elements using pointer arithmetic:\n");
 
-    printf("ptr = %p, *ptr = %d\n", ptr, *ptr);
+    for (int i = 0; i < 5; i++) {
+        printf("Value at arr[%d] = %d, Address = %p\n", 
+                i, *(ptr + i), (ptr + i));
+    }
 
-    
+    printf("\nPointer movement demonstration:\n");
+    printf("ptr initially points to: %p\n", ptr);
 
-    printf("after ptr++, ptr = %p, *ptr = %d\n", ptr, *ptr);
-ptr+=2;
-printf("after ptr+=2;ptr=%p,*ptr=%d\n",ptr,*ptr);
+    ptr++;  
+    printf("After ptr++ it points to: %p (value = %d)\n", ptr, *ptr);
+
+    ptr--; 
+    printf("After ptr-- it points to: %p (value = %d)\n", ptr, *ptr);
+
     return 0;
 }
